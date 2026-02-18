@@ -58,10 +58,10 @@ class AutoSpeed:
         self.MIN_SHORT_MOVE_DISTANCE = 5.0
         self.MINIMUM_CRUISE_DISTANCE = 20.0
 
-        results_default = os.path.expanduser('~')
-        for path in (os.path.dirname(self.printer.start_args['log_file']), os.path.expanduser('~/printer_data/config')):
-            if os.path.exists(path):
-                results_default = path
+        results_default = os.path.expanduser('~/printer_data/config')
+        #for path in (os.path.dirname(self.printer.start_args['log_file']), os.path.expanduser('~/printer_data/config')):
+        #    if os.path.exists(path):
+        #        results_default = path
         self.results_dir = os.path.expanduser(config.get('results_dir', default=results_default))
 
         self.toolhead = None
